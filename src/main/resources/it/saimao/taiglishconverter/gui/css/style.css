@@ -1,7 +1,7 @@
 .root {
-    -fx-background-color: red;
+    -fx-background-color: white;
 }
 
-button {
-    -fx-background-color: blue;
+.text-area {
+    -fx-font-size: 16px;
 }
