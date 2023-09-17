@@ -3,6 +3,7 @@ package it.saimao.taiglishconverter.gui;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class TaiglishConverterApp extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Taiglish Converter");
         stage.setScene(scene);
+        stage.getIcons().add(new Image(getClass().getResource("/it/saimao/taiglishconverter/gui/images/icon-small.png").toExternalForm()));
         stage.show();
     }
 

@@ -1,7 +1,43 @@
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/robotocondensed-regular.ttf');
+}
+
+@font-face {
+    font-family: 'NamKhoneUnicode';
+    src: url('../fonts/namkhone-unicode.ttf');
+}
+
+@font-face {
+    font-family: 'A Jkunheing15';
+    src: url('../fonts/ajkunheing15.ttf');
+}
+
 .root {
-    -fx-background-color: white;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Roboto Condensed";
+}
+
+.button {
+    -fx-background-color: #3743bd;
+    -fx-text-fill: white;
+}
+
+.button#btClear {
+    -fx-background-color: #d04141;
 }
 
 .text-area {
     -fx-font-size: 16px;
+    -fx-background-color: #3743bd;
+    -fx-text-fill: black;
+}
+
+#etTai {
+    -fx-font-family: 'NamKhoneUnicode';
+}
+
+#title {
+    -fx-font-family: 'A Jkunheing15';
+    -fx-font-size: 30px;
 }
