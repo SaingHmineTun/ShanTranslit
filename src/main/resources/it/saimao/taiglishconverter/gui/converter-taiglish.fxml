@@ -18,7 +18,7 @@
          </VBox.margin></Label>
         <HBox alignment="CENTER" maxHeight="500.0" maxWidth="900.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #3743bd; -fx-border-width: 1; -fx-background-color: #818fe7;">
             <children>
-                <TextArea fx:id="etTai" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" promptText="တႅမ်ႈလိၵ်ႈတႆးတီႈၼႆႈ" HBox.hgrow="ALWAYS" />
+                <TextArea fx:id="etTai" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" promptText="တႅမ်ႈလိၵ်ႈတႆးတီႈၼႆႈ" wrapText="true" HBox.hgrow="ALWAYS" />
                 <VBox alignment="CENTER" prefWidth="75.0" spacing="20.0">
                     <HBox.margin>
                         <Insets left="20.0" right="20.0" />
@@ -67,7 +67,7 @@
                         </Button>
                     </children>
                 </VBox>
-                <TextArea fx:id="etEng" layoutX="10.0" layoutY="10.0" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" promptText="Your english here" HBox.hgrow="ALWAYS" />
+                <TextArea fx:id="etEng" layoutX="10.0" layoutY="10.0" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" promptText="Your english here" wrapText="true" HBox.hgrow="ALWAYS" />
             </children>
             <padding>
                 <Insets bottom="40.0" left="20.0" right="20.0" top="40.0" />
