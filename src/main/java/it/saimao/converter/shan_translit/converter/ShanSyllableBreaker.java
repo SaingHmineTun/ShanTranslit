@@ -1,4 +1,4 @@
-package it.saimao.taiglishconverter.gui.converter;
+package it.saimao.converter.shan_translit.converter;
 
 public class ShanSyllableBreaker {
     public static String syllable_break(String input_text) {

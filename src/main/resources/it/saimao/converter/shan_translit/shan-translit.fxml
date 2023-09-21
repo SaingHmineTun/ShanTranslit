@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.saimao.converter.shan_translit.ShanTranslitController">
+    <children>
+      <Label fx:id="title" alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" text="Shan Translit">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin></Label>
+        <HBox alignment="CENTER" maxHeight="500.0" maxWidth="900.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #3743bd; -fx-border-width: 1; -fx-background-color: #818fe7;">
+            <children>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="language-name" text="ႁွင်ႈတႅမ်ႈလိၵ်ႈ" />
+                        <JFXButton fx:id="btCopyInput" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" styleClass="transparent-button" text="Button">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0">
+                                    <Image url="@images/copy.png" />
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                      <TextArea fx:id="etInput" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" promptText="တႅမ်ႈလိၵ်ႈတီႈၼႆႈ" wrapText="true" />
+               </children>
+            </VBox>
+                <VBox alignment="CENTER" prefWidth="75.0" spacing="20.0">
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                    <children>
+                        <JFXButton fx:id="btConvert" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" text="Convert">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0">
+                                    <Image url="@images/convert.png" />
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                            </padding>
+                        </JFXButton>
+                  <JFXButton fx:id="btCopy" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="5.0" layoutX="10.0" layoutY="248.0" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" text="Copy Both">
+                     <graphic>
+                         <ImageView fitHeight="30.0" fitWidth="30.0">
+                             <Image url="@images/copy.png" />
+                         </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                        <JFXButton fx:id="btClear" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="5.0" layoutX="10.0" layoutY="180.0" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" text="Clear">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0">
+                                    <Image url="@images/close.png" />
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label styleClass="language-name" text="ႁွင်ႈၼႄလိၵ်ႈ" />
+                        <JFXButton fx:id="btCopyOutput" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" styleClass="transparent-button" text="Button">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0">
+                                    <Image url="@images/copy.png" />
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                      <TextArea fx:id="etOutput" editable="false" maxHeight="500.0" maxWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" promptText="လိၵ်ႈဢၼ်ပိၼ်ႇယဝ်ႉ ၼႄတီႈၼႆႈ" wrapText="true" />
+               </children>
+            </VBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

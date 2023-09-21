@@ -1,4 +1,4 @@
-package it.saimao.taiglishconverter.gui.utils;
+package it.saimao.converter.shan_translit.utils;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;

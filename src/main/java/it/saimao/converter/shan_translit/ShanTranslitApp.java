@@ -1,4 +1,4 @@
-package it.saimao.taiglishconverter.gui;
+package it.saimao.converter.shan_translit;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,14 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TaiglishConverterApp extends Application {
+public class ShanTranslitApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TaiglishConverterApp.class.getResource("converter-taiglish.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ShanTranslitApp.class.getResource("shan-translit.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Taiglish Converter");
+        stage.setTitle("Shan Translit");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(getClass().getResource("/it/saimao/taiglishconverter/gui/images/icon-small.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/it/saimao/converter/shan_translit/images/icon-small.png").toExternalForm()));
         stage.show();
     }
 

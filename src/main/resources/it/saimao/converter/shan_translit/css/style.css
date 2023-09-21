@@ -33,7 +33,17 @@
     -fx-text-fill: black;
 }
 
-#etTai {
+.language-name {
+    -fx-font-family: 'A Jkunheing15';
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+}
+
+.transparent-button {
+    -fx-background-color: transparent;
+}
+
+#etInput, #etOutput {
     -fx-font-family: 'NamKhoneUnicode';
 }
 

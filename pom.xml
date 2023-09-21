@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>it.saimao.taiglishconverter</groupId>
-    <artifactId>gui</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>TaiglishConverterGUI</name>
+    <groupId>it.saimao.converter</groupId>
+    <artifactId>shan_translit</artifactId>
+    <version>1.2</version>
+    <name>Shan Translit</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +25,13 @@
             <artifactId>javafx-fxml</artifactId>
             <version>20.0.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.jfoenix/jfoenix -->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.10</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -38,6 +45,21 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-core</artifactId>
+            <version>4.0.1-alpha</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-junit</artifactId>
+            <version>4.0.1-alpha</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -61,7 +83,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                it.saimao.taiglishconverter.gui/it.saimao.taiglishconverter.gui.TaiglishConverterApp
+                                it.saimao.taiglishconverter.gui/it.saimao.converter.shan_translit.ShanTranslitApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

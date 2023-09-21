@@ -3,6 +3,6 @@ module it.saimao.taiglishconverter.gui {
     requires javafx.fxml;
 
 
-    opens it.saimao.taiglishconverter.gui to javafx.fxml;
-    exports it.saimao.taiglishconverter.gui;
+    opens it.saimao.converter.shan_translit to javafx.fxml;
+    exports it.saimao.converter.shan_translit;
 }
