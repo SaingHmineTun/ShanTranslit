@@ -277,10 +277,8 @@ public class ShanTranslit {
         String output = input.toLowerCase();
 
         String checkIsToneMarkIncludingOrNot = "(?!.*(?:\\u030c|\\u0300|\\u0304|\\u0301|\\u0302\\u0330|\\u1dc8))[\\s\\S]*";
-        System.out.println(Pattern.matches(checkIsToneMarkIncludingOrNot, input));
         if (Pattern.matches(checkIsToneMarkIncludingOrNot, input)) {
             output = output.replaceAll("(k|kh|ng|ts|z|j|s|ny|t|th|n|p|ph|f|m|y|r|l|w|h|ʼ)([aeiou])", "$1$2\u030c");
-            System.out.println(output);
         }
         // y - ပျ
         output = output.replaceAll("^(k|kh|ng|ts|s|ny|t|th|n|p|ph|f|m|y|r|l|w|h|ʼ)y(a)$", "$1\u103b");

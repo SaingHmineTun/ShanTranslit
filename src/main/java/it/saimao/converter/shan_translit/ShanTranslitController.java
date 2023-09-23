@@ -87,7 +87,6 @@ public class ShanTranslitController implements Initializable {
             if (event.getButton() == MouseButton.PRIMARY) {
                 // Check if long click was not detected before firing short click action
                 if (!longClickDetected) {
-                    System.out.println("Short click detected!");
                     convert();
                 }
                 longClickDetected = false; // Reset the flag on release
