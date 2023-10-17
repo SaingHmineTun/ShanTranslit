@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ShanTranslitApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ShanTranslitApp.class.getResource("shan-translit.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shan-translit.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Shan Translit");
         stage.setScene(scene);
