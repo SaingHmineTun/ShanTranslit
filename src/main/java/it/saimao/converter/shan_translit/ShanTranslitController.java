@@ -116,7 +116,6 @@ public class ShanTranslitController implements Initializable {
     private void convertFromTaiToEng() {
         String output = ShanTranslit.taiToEng(etInput.getText());
         etOutput.setText(output);
-        etOutput.setFont(Font.font("NamKhoneUnicode"));
     }
 
     private void copyOutput(ActionEvent actionEvent) {
