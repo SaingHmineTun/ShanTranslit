@@ -6,7 +6,7 @@
 
     <groupId>it.saimao.converter</groupId>
     <artifactId>shan_translit</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
     <name>Shan Translit</name>
 
     <properties>
