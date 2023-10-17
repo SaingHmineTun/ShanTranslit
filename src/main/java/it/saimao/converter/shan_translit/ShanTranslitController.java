@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.*;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -115,6 +116,7 @@ public class ShanTranslitController implements Initializable {
     private void convertFromTaiToEng() {
         String output = ShanTranslit.taiToEng(etInput.getText());
         etOutput.setText(output);
+        etOutput.setFont(Font.font("NamKhoneUnicode"));
     }
 
     private void copyOutput(ActionEvent actionEvent) {
