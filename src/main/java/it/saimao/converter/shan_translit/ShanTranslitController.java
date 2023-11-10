@@ -7,10 +7,8 @@ import it.saimao.converter.shan_translit.utils.ToastHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.*;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -40,6 +38,17 @@ public class ShanTranslitController implements Initializable {
     @FXML
     private Button btCopyOutput;
 
+    @FXML
+    private ToggleGroup tg;
+    @FXML
+    private RadioButton rbShn2Eng;
+
+    @FXML
+    private RadioButton rbEng2Shn;
+
+    @FXML
+    private CheckBox cbShowTone;
+
     private static final int LONG_CLICK_DURATION = 1000;
     private boolean longClickDetected;
 
@@ -48,10 +57,10 @@ public class ShanTranslitController implements Initializable {
     private final ClipboardContent content = new ClipboardContent();
 
     private void convert() {
-        if (ShanUnicodeDetector.isShanUnicode(etInput.getText())) {
-            convertFromTaiToEng();
+        if (rbShn2Eng.isSelected()) {
+            convertFromShanToEng();
         } else {
-            convertFromEngToTai();
+            convertFromEngToShan();
         }
     }
 
@@ -64,6 +73,15 @@ public class ShanTranslitController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //        btConvert.setOnAction(this::convert);
 //        btConvert.setOnMousePressed(this::convertFromTaiToEngWithoutTone);
+
+
+        tg.selectedToggleProperty().addListener((observableValue, oldValue, newValue) -> {
+            if (newValue == rbShn2Eng) {
+                cbShowTone.setVisible(true);
+            } else {
+                cbShowTone.setVisible(false);
+            }
+        });
 
         // btConvert LONG CLICK
         btConvert.setOnMousePressed(event -> {
@@ -105,17 +123,20 @@ public class ShanTranslitController implements Initializable {
         if (ShanUnicodeDetector.isShanUnicode(etInput.getText())) {
             etOutput.setText(ShanTranslit.taiToEngWithoutTone(etInput.getText()));
         } else {
-            convertFromEngToTai();
+            convertFromEngToShan();
         }
     }
 
-    private void convertFromEngToTai() {
+    private void convertFromEngToShan() {
         etOutput.setText(ShanTranslit.engToTai(etInput.getText()));
     }
 
-    private void convertFromTaiToEng() {
-        String output = ShanTranslit.taiToEng(etInput.getText());
-        etOutput.setText(output);
+    private void convertFromShanToEng() {
+        if (cbShowTone.isSelected()) {
+            etOutput.setText(ShanTranslit.taiToEngWithoutTone(etInput.getText()));
+        } else {
+            etOutput.setText(ShanTranslit.taiToEng(etInput.getText()));
+        }
     }
 
     private void copyOutput(ActionEvent actionEvent) {
