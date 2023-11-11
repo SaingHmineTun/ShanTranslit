@@ -19,7 +19,7 @@
 }
 
 .button {
-    -fx-background-color: #3743bd;
+    -fx-background-color: #398439;
     -fx-text-fill: white;
 }
 
@@ -29,7 +29,7 @@
 
 .text-area {
     -fx-font-size: 16px;
-    -fx-background-color: #3743bd;
+    -fx-background-color: #398439;
     -fx-text-fill: black;
 }
 

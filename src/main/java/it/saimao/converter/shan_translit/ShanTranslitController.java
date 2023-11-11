@@ -133,9 +133,9 @@ public class ShanTranslitController implements Initializable {
 
     private void convertFromShanToEng() {
         if (cbShowTone.isSelected()) {
-            etOutput.setText(ShanTranslit.taiToEngWithoutTone(etInput.getText()));
-        } else {
             etOutput.setText(ShanTranslit.taiToEng(etInput.getText()));
+        } else {
+            etOutput.setText(ShanTranslit.taiToEngWithoutTone(etInput.getText()));
         }
     }
 
